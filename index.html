@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Sender</title>
+</head>
+<body>
+    <h1>Location Sender</h1>
+    <button onclick="getLocation()">Get Location</button>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(sendLocation);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function sendLocation(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Replace 'YOUR_SERVER_ENDPOINT' with the actual endpoint on your server.
+            const serverEndpoint = 'https://7958-2401-4900-1c54-2856-ecf0-bcc6-fb77-daab.ngrok-free.app/endpoint';
+
+            // Send the latitude and longitude to your server using the Fetch API.
+            fetch(serverEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ latitude, longitude }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Location sent successfully:', data);
+                alert('Location sent successfully!');
+            })
+            .catch(error => {
+                console.error('Error sending location:', error);
+                alert('Error sending location. Please try again.');
+            });
+        }
+    </script>
+</body>
+</html>
+
