@@ -54,13 +54,15 @@ This application serves as a robust centralized surveillance system designed to 
 - Handles fetching locations from remote devices.
   
 ### Camera Metadata
-
+![](Images/Info-box.jpg)
 - Maintains a comprehensive database for each camera.
 - Includes hierarchical location ID, owner information, health status, and more.
 - Streaming resolution configuration for optimal video quality.
 
 ### Map Visualization
+![](Images/Map-1.jpg)
 
+![](Images/Map-2.jpg)
 - Visualizes all cameras on an interactive map for each district.
 - Facilitates a comprehensive overview of the surveillance area.
 - Aids in identifying potential blind spots.
