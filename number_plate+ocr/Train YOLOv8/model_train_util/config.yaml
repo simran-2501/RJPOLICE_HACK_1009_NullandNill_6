@@ -1,0 +1,8 @@
+
+path: C:/Users/arthrow/Downloads/LP # dataset root dir
+train: images/train  # train images (relative to 'path')
+val: images/valid  # val images (relative to 'path')
+
+# Classes
+names:
+  0: License_Plate
