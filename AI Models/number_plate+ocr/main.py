@@ -11,7 +11,7 @@ results = {}
 mot_tracker = Sort()
 
 # load models
-coco_model = YOLO('yolov8n.pt')
+coco_model = YOLO('best.pt')
 license_plate_detector = YOLO('./weights/best.pt')
 
 # load video
