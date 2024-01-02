@@ -78,12 +78,14 @@
             geocoder.geocode({ location: marker.getPosition() }, function (results, status) {
               if (status === google.maps.GeocoderStatus.OK) {
                 var address = results[0].formatted_address;
+                var pincode = address.match(/\b\d{6}\b/);
 
                 // Set info window content
                 infowindow.setContent(
                   "<div class='info-window'>" +
                   "<p>Latitude: " + location.latitude + "</p>" +
                   "<p>Longitude: " + location.longitude + "</p>" +
+                  "<p>Id: RJ-" + pincode+"-"+location._id+ "</p>" +
                   "<p>Address: " + address + "</p>" +
                   "</div>"
                 );
