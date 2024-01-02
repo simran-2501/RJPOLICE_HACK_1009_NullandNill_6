@@ -1,0 +1,88 @@
+Vehicle Type/Size, Vehicle Color, Vehicle Movement Direction, Vehicle Speed (km/h)
+car,white,down,37.49732414881388
+truck,black,down,51.68427626291911
+truck,blue,down,61.80389245351155
+person,white,down,133.7750385204951
+car,white,down,67.09707736968994
+truck,yellow,down,12.840477750342117
+car,blue,down,26.231461564699806
+car,green,down,51.8183437983195
+bus,white,down,357.82718300819397
+truck,black,down,65.86672842502594
+car,white,down,79.77483868598938
+car,green,down,104.51433340708414
+car,white,down,85.6265762646993
+truck,black,down,n.a.
+car,white,down,13.647888898849487
+car,white,down,8.003617210520638
+car,white,down,103.94578774770102
+car,white,down,64.64475870132446
+truck,black,up,n.a.
+bus,black,down,65.18620120154486
+bus,black,down,76.36413368913863
+car,blue,down,205.39006769657135
+cell phone,white,down,67.02119886875153
+car,white,down,62.800088723500565
+car,black,down,71.0183976093928
+car,white,down,40.92908064524333
+cell phone,black,down,4.34296002513484
+car,blue,down,1.2135658494408628
+cell phone,blue,down,63.459564447402954
+car,blue,down,164.1228699684143
+car,blue,down,22.120057145754494
+bus,orange,down,73.47087144851685
+person,blue,down,30.44233043988546
+car,white,down,36.29211286703745
+bus,black,up,n.a.
+car,black,down,69.08729751904805
+truck,white,down,64.89241123199463
+car,white,down,82.25226915544934
+cell phone,blue,down,40.067727764447525
+car,white,down,67.74677733580272
+car,white,down,27.256403217713036
+car,white,down,136.6114048163096
+bus,white,down,5.789807770975787
+truck,white,down,76.20622158050537
+bus,black,down,35.621949757138886
+car,white,down,14.02060906092326
+truck,black,down,28.756555318832397
+truck,black,down,49.62097068627675
+truck,white,down,n.a.
+truck,white,down,86.46006047725677
+car,white,down,54.11362965901692
+car,white,down,136.80924753348032
+car,white,down,n.a.
+truck,white,up,n.a.
+car,white,down,62.59417712688446
+car,white,down,69.08853888511658
+cell phone,white,down,41.5863839785258
+car,white,down,63.455879141887024
+car,white,down,116.37093106905618
+person,green,down,45.23956914742787
+car,white,down,n.a.
+cell phone,black,down,68.63606095314026
+bus,white,down,n.a.
+car,white,down,41.25493923823039
+car,white,down,49.56231613953908
+car,white,down,84.90687876939774
+cell phone,white,down,50.26710172494252
+car,white,down,22.05490759440831
+car,white,down,53.04822723070781
+car,black,down,44.192476868629456
+car,white,down,44.6269549926122
+car,white,down,8.16818873087565
+cell phone,white,down,5.9129369258880615
+car,blue,down,53.367413481076554
+truck,black,down,34.12189463774363
+car,white,up,-14.134840601020391
+car,white,down,67.84655213356018
+car,white,down,164.13218021392822
+car,white,down,30.1888237396876
+car,white,down,n.a.
+car,white,down,39.995728532473244
+person,black,down,0.5989591280619303
+car,blue,down,5.240737199783325
+car,white,down,123.18447907765707
+cell phone,white,down,9.959790309270224
+truck,white,down,31.435104786304006
+person,white,down,n.a.
