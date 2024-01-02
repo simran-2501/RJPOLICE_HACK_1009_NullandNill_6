@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 3000;
 
-const url = 'mongodb+srv://pauladitya8822:Qazwsxedc*12@cluster0.kkxdzty.mongodb.net/'
+const url = 'mongodb+srv://<username>:<password>@cluster0.kkxdzty.mongodb.net/'
 // Connect to MongoDB using async/await syntax
 async function connectToDatabase() {
   try {
