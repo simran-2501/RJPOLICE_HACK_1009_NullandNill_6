@@ -27,3 +27,21 @@ Training Process Images for custom YOLOv8 License plate  detection:
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="" alt="Train 1" src="https://i.imgur.com/0Yahytu.gif">|  <img width="" alt="Train 2" src="https://i.imgur.com/rZ30QMh.gif">|<img width="" alt="Train Complete" src="https://i.imgur.com/aSJG82x.gif">|
+
+Result of Vehicle Type, Colour and Speed
+[Demo](https://i.imgur.com/7cw2U4W.gifv)
+
+Result of custome detection of license plates:
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="" alt="Train 1" src="https://i.imgur.com/J6ZyqCF.jpg">|  <img width="" alt="Train 2" src="https://i.imgur.com/4OfURFD.jpg">|<img width="" alt="Train Complete" src="https://i.imgur.com/isBOS91.jpg">|
+
+Current System of Deployment:
+![System](https://i.imgur.com/1N6GZWu.jpg)
+
+Future Work:
+- Work on more recent models and increasing accuracy specifically for indian cars brands, colours etc.
+- Introduce more prepocessing options such as light balance, night mode for CCTV capture.
+- Implement FaceDetector as well as suspicious object detector from datasets like [this](https://www.kaggle.com/datasets/ajibsbaba/dangerousobjects)
+
+  Major updation of models as well as cloud implementation will be achieved by 8th January 2024.
