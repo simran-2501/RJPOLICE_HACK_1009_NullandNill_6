@@ -36,6 +36,7 @@ This application serves as a robust centralized surveillance system designed to 
 - Integrates YOLOv8 object detection model for vehicle color, type and number plate recognition.
 - Utilizes facial recognition to identify unauthorized individuals.
 - Displays bounding boxes and capture frames after fetching streams from the cloud and store the tagged info separately so it saves time.
+- Detailed information check [AI Readme](https://github.com/simran-2501/RJPOLICE_HACK_1009_NullandNill_6/blob/main/AI%20Models/README.md)
 
 ### Alerting Mechanisms via MQTT
 
