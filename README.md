@@ -75,3 +75,21 @@ This application serves as a robust centralized surveillance system designed to 
 - Implements Kerberos for secure and reliable authentication.
 
 The design on the app can be seen [here](https://www.figma.com/file/DEhKfePscqCpsP7Lpx2yj4/security-(Community)?type=design&node-id=0%3A1&mode=design&t=M0ETGKfWs7FWqsRv-1).
+
+-The client side app demo can be seen below :
+![](Images/demo.mp4)
+
+
+### Results of the Models
+- Blur/Blackout Detection using Laplacian Filter to identify Uniform Color or a blurred Camera stream which detects Camera has been Tampered with. 
+![](Images/Blackout.jpg)
+- Camera directional movement - We would be tracking directions based out of Maximum of Outer boundary pixels and feature extraction to identify a camera's viewport is changed.
+-Mob Detection - Based on head counts of the public places based on history and a Mock Head Count.
+-Accident Detection - Based on off collision of Vehicles, we generate alerts for the police to provide people with faster and efficient help.
+![](Images/Accident.jpg)
+
+- Vehicle Automatic Number plate recognition - By providing a certain feed, we can extract certain number plates with nearest 3 accuraate possible combinations to be eliminated by Manual Error Detection.
+-Vehicle Type and Object Detection : Images get stored and tracked from live feeds, vehicles are tracked and categorically classified .
+![](Images/Object-1.jpg)
+-Fighting Detection - Using Mobilenet and LSTM, we have trained a dataset over TP100 graphic accelerator to identify violence in specific image frames for the police to intervene and maintain prosperity.
+![](Images/Fighting.png)
