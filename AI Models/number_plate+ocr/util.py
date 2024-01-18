@@ -19,6 +19,11 @@ dict_int_to_char = {'0': 'O',
                     '6': 'G',
                     '5': 'S'}
 
+vehicle_name={2: 'car',
+ 3: 'motorcycle',
+ 5: 'bus',
+ 7: 'truck',}
+
 
 def write_csv(results, output_path):
     """
@@ -29,9 +34,9 @@ def write_csv(results, output_path):
         output_path (str): Path to the output CSV file.
     """
     with open(output_path, 'w') as f:
-        f.write('{},{},{},{},{},{},{}\n'.format('frame_nmr', 'car_id', 'car_bbox',
-                                                'license_plate_bbox', 'license_plate_bbox_score', 'license_number',
-                                                'license_number_score'))
+        f.write('{},{},{},{},{}\n'.format('frame_nmr', 'car_id', 'car_bbox',
+                                                'license_plate_bbox', 'license_number',
+                                                ))
 
         for frame_nmr in results.keys():
             for car_id in results[frame_nmr].keys():
@@ -39,8 +44,8 @@ def write_csv(results, output_path):
                 if 'car' in results[frame_nmr][car_id].keys() and \
                    'license_plate' in results[frame_nmr][car_id].keys() and \
                    'text' in results[frame_nmr][car_id]['license_plate'].keys():
-                    f.write('{},{},{},{},{},{},{}\n'.format(frame_nmr,
-                                                            car_id,
+                    f.write('{},{},{},{},{}\n'.format(frame_nmr,
+                                                            vehicle_name[car_id],
                                                             '[{} {} {} {}]'.format(
                                                                 results[frame_nmr][car_id]['car']['bbox'][0],
                                                                 results[frame_nmr][car_id]['car']['bbox'][1],
@@ -51,9 +56,7 @@ def write_csv(results, output_path):
                                                                 results[frame_nmr][car_id]['license_plate']['bbox'][1],
                                                                 results[frame_nmr][car_id]['license_plate']['bbox'][2],
                                                                 results[frame_nmr][car_id]['license_plate']['bbox'][3]),
-                                                            results[frame_nmr][car_id]['license_plate']['bbox_score'],
-                                                            results[frame_nmr][car_id]['license_plate']['text'],
-                                                            results[frame_nmr][car_id]['license_plate']['text_score'])
+                                                            results[frame_nmr][car_id]['license_plate']['text'])
                             )
         f.close()
 
@@ -122,6 +125,7 @@ def read_license_plate(license_plate_crop):
         bbox, text, score = detection
 
         text = text.upper().replace(' ', '')
+        print(text)
 
         if license_complies_format(text):
             return format_license(text), score
