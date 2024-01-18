@@ -77,7 +77,7 @@ This application serves as a robust centralized surveillance system designed to 
 The design on the app can be seen [here](https://www.figma.com/file/DEhKfePscqCpsP7Lpx2yj4/security-(Community)?type=design&node-id=0%3A1&mode=design&t=M0ETGKfWs7FWqsRv-1).
 
 -The client side app demo can be seen below :
-![[]](Images/demo.mp4)
+![[]]([Images/demo.mp4](https://github.com/simran-2501/RJPOLICE_HACK_1009_NullandNill_6/tree/main/Images/demo.mp4))
 
 
 ### Results of the Models
