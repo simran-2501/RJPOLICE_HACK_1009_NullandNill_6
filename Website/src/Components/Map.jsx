@@ -11,7 +11,7 @@ function Map() {
           zoom: 10
         });
 
-        const serverEndpoint = 'https://1c33-223-178-208-28.ngrok-free.app/api/locations';
+        const serverEndpoint = 'https://8108-103-23-239-38.ngrok-free.app/api/locations';
 
         const locations = await fetch(serverEndpoint, {
           method: 'get',
@@ -91,7 +91,7 @@ function Map() {
     };
   }, []);
 
-  return <div id="map" style={{height:'85vh', width: '100%' }}></div>;
+  return <div id="map" style={{height:'87vh', width: '100%' }}></div>;
 }
 
 export default Map;

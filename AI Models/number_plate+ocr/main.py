@@ -6,32 +6,31 @@ from util import get_car, read_license_plate, write_csv
 import easyocr
 import pytesseract
 from pytesseract import Output
-import pymongo
-from bson.binary import Binary
+# import pymongo
+# from bson.binary import Binary
 import os
 
 # Connect to MongoDB
-client = pymongo.MongoClient("mongodb+srv://pm2694:875YVXiwF3k0dnLZ@safelens.9ryjuoa.mongodb.net/")
-db = client["your_database"]
-collection = db["your_collection"]
+# client = pymongo.MongoClient("mongodb+srv://pm2694:875YVXiwF3k0dnLZ@safelens.9ryjuoa.mongodb.net/")
+# db = client["your_database"]
+# collection = db["your_collection"]
 
 reader = easyocr.Reader(['en'])
 
 pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
 # Set environment variable
-import os
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 results = {}
 mot_tracker = Sort()
 
 # Load models
-coco_model = YOLO('yolov8n.pt')
-license_plate_detector = YOLO('best.pt')
+coco_model = YOLO('C:/Users/prana/Desktop/New folder/RJPOLICE_HACK_1009_NullandNill_6/AI Models/number_plate+ocr/yolov8n.pt')
+license_plate_detector = YOLO('C:/Users/prana/Desktop/New folder/RJPOLICE_HACK_1009_NullandNill_6/AI Models/number_plate+ocr/best.pt')
 
 # Load video
-cap = cv2.VideoCapture("./please.mp4")
+cap = cv2.VideoCapture("C:/Users/prana/Desktop/New folder/RJPOLICE_HACK_1009_NullandNill_6/AI Models/number_plate+ocr/car.mp4")
 
 # List of vehicle class IDs
 vehicles = [2, 3, 5, 7]
@@ -82,14 +81,14 @@ while ret:
 
                 
                 # Convert the frame to binary data
-                _, buffer = cv2.imencode(".jpg", license_plate_crop)
-                frame_binary = Binary(buffer)
+                # _, buffer = cv2.imencode(".jpg", license_plate_crop)
+                # frame_binary = Binary(buffer)
 
-                # Create a document to insert into MongoDB
-                document = {"image": frame_binary}
+                # # Create a document to insert into MongoDB
+                # document = {"image": frame_binary}
 
-                # Insert the document into the MongoDB collection
-                collection.insert_one(document)
+                # # Insert the document into the MongoDB collection
+                # collection.insert_one(document)
 
                 # Process license plate
                 license_plate_crop_gray = cv2.cvtColor(license_plate_crop, cv2.COLOR_BGR2GRAY)
@@ -115,13 +114,16 @@ while ret:
                     cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 2)
                     cv2.putText(frame, f"ID: {car_id}, Plate: {ocr_result}", (int(xcar1), int(ycar1) - 10),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-    cv2.imshow('Frame', detections[0].plot())
+    try:
+        cv2.imshow('Frame', detections[0].plot())
+    except:
+        pass
     if cv2.waitKey(1) & 0xFF == ord('q'): 
         break
 
 # Write results
 write_csv(results, './test.csv')
-print(results)
+# print(results)
 # Release video capture and close windows
 # cap.release()
 # cv2.destroyAllWindows()

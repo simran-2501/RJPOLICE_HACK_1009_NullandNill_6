@@ -5,7 +5,7 @@ from ultralytics.utils.plotting import Annotator
 import imutils
 from vidgear.gears import CamGear
 
-crash_detector = YOLO('yolov8n.pt')
+crash_detector = YOLO('C:/Users/prana/Desktop/New folder/RJPOLICE_HACK_1009_NullandNill_6/AI Models/Realtime Identification from live YT video/yolov8n.pt')
 stream = CamGear(source='https://www.youtube.com/watch?v=1EiC9bvVGnk&ab_channel=SeeJacksonHole', stream_mode = True, logging=True).start() # YouTube Video URL as input
 
 while True:

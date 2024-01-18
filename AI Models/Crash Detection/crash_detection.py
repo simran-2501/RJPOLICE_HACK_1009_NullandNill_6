@@ -4,8 +4,8 @@ from ultralytics import YOLO
 from ultralytics.utils.plotting import Annotator
 import imutils
 
-crash_detector = YOLO('crash.pt')
-cap = cv2.VideoCapture("cr.mp4")
+crash_detector = YOLO('C:/Users/prana/Desktop/New folder/RJPOLICE_HACK_1009_NullandNill_6/AI Models/Crash Detection/crash.pt')
+cap = cv2.VideoCapture("C:/Users/prana/Desktop/New folder/RJPOLICE_HACK_1009_NullandNill_6/AI Models/Crash Detection/cr.mp4")
 ret = True
 
 while ret:
